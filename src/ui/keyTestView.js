@@ -4,14 +4,9 @@ import { KEYS } from "../input/keys.js";
 import { lookupMidi } from "../feedback/fingerings.js";
 import { t, applyI18n } from "../i18n/index.js";
 import { noteName } from "./noteName.js";
+import { keyGridHtml, paintKeys } from "./keyGrid.js";
 
 export function mountKeyTestView(container, input) {
-  const keyCell = (k) => `
-    <div class="key" data-key="${k.id}">
-      <b>${k.label}</b><span class="kbd">${k.code.replace(/^Key|^Digit/, "")}</span>
-    </div>`;
-  const grid = (group) => KEYS.filter((k) => k.group === group).map(keyCell).join("");
-
   container.innerHTML = `
     <section class="panel">
       <p class="muted" data-i18n="keyTest.hint"></p>
@@ -19,22 +14,13 @@ export function mountKeyTestView(container, input) {
       <div class="note-box" id="noteBox"></div>
       <div class="muted"><span data-i18n="keyTest.pressed"></span>: <span id="pressedList"></span></div>
     </section>
-    <section class="panel">
-      <h2 data-i18n="keyGroup.hole"></h2>
-      <div class="key-grid">${grid("hole")}</div>
-    </section>
-    <section class="panel">
-      <h2 data-i18n="keyGroup.lever"></h2>
-      <div class="key-grid">${grid("lever")}</div>
-    </section>`;
+    ${keyGridHtml()}`;
   applyI18n(container);
 
   const render = () => {
     const state = input.getState();
     const pressed = KEYS.filter((k) => state[k.id]);
-    container.querySelectorAll(".key").forEach((el) => {
-      el.classList.toggle("on", state[el.dataset.key]);
-    });
+    paintKeys(container, state);
     const midi = lookupMidi(pressed.map((k) => k.id));
     container.querySelector("#noteBox").textContent = midi === null ? t("keyTest.unknown") : noteName(midi);
     container.querySelector("#pressedList").textContent =

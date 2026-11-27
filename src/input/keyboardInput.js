@@ -30,6 +30,7 @@ export class KeyboardInput extends InputAdapter {
     const id = ID_BY_CODE[e.code];
     if (!id) return;
     if (e.metaKey || e.ctrlKey || e.altKey) return; // Cmd+R 같은 단축키는 건드리지 않는다
+    if (covered && e.target.closest?.("input, textarea, select")) return; // 입력창에 글자를 칠 때는 운지로 보지 않는다
     e.preventDefault();
     this.set(id, covered);
   }

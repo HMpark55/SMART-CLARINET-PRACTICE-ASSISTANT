@@ -19,6 +19,36 @@ export default {
   "keyTest.unknown": "指法表中没有这个组合", // 확인 필요
   "keyTest.allOpen": "全部打开", // 확인 필요
 
+  "practice.notice1": "声音不会被保存，只有数字记录保存在这台设备上。", // 확인 필요
+  "practice.notice2": "请不要填写姓名、学校或联系方式。请使用老师给你的匿名代码。", // 확인 필요
+  "practice.storageOff": "此浏览器无法保存记录，关闭窗口后记录会消失。", // 확인 필요
+  "practice.agree": "我已阅读说明",
+  "practice.anonLabel": "匿名代码",
+  "practice.anonHint": "2~16位英文字母或数字（例：S01）",
+  "practice.anonInvalid": "匿名代码请使用2~16位英文字母或数字。",
+  "practice.hintToggle": "显示指法提示（虚线 = 要按的键）", // 확인 필요
+  "practice.start": "开始练习",
+  "practice.instruction": "按好指法后按空格键（或确认按钮）", // 확인 필요
+  "practice.submit": "确认",
+  "practice.skip": "跳过",
+  "practice.stop": "停止",
+  "practice.progress": "{n} / {total}",
+  "practice.doneTitle": "练习结束！",
+  "practice.summary": "答对 {solved} / {total} 个音 · 尝试 {attempts} 次", // 확인 필요
+  "practice.avgTime": "答对时的平均反应时间：{s}秒", // 확인 필요
+  "practice.again": "再练一次",
+
+  "feedback.correct": "正确！",
+  "feedback.wrongKeys": "再试一次。请检查这些键：{keys}", // 확인 필요
+  "feedback.notReady": "判定功能准备中（不会记录）", // 확인 필요
+
+  "records.title": "本设备上的记录",
+  "records.count": "{s} 次练习 · {a} 次尝试", // 확인 필요
+  "records.csvSessions": "练习 CSV", // 확인 필요
+  "records.csvAttempts": "尝试 CSV", // 확인 필요
+  "records.delete": "删除我的记录",
+  "records.confirmDelete": "要删除这台设备上保存的所有练习记录和匿名代码吗？",
+
   "keyGroup.hole": "音孔",
   "keyGroup.lever": "按键",
 

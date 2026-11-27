@@ -6,6 +6,8 @@
   --line: #dcdad4;
   --accent: #2f6f5e;
   --on: #e07a2f;
+  --good: #2f7d32;
+  --bad: #c62828;
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
@@ -17,6 +19,8 @@
     --line: #34343a;
     --accent: #6fbfa8;
     --on: #f0954c;
+    --good: #7bc67e;
+    --bad: #ef6b6b;
   }
 }
 
@@ -60,3 +64,27 @@ select { padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; ba
 .key .kbd { color: var(--muted); font-size: 0.75rem; }
 .key.on .kbd { color: #fff; }
 h2 { font-size: 1rem; margin: 0 0 10px; }
+
+/* 공통 버튼·폼 */
+.row { display: flex; flex-wrap: wrap; gap: 8px; }
+.center { text-align: center; justify-content: center; }
+.btn {
+  padding: 8px 16px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--panel); cursor: pointer;
+}
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.primary:disabled { opacity: 0.45; cursor: default; }
+.btn.danger { color: var(--bad); }
+.field { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0; }
+.field input[type="text"], .field input:not([type]) {
+  padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); width: 10rem;
+}
+.small { font-size: 0.8rem; }
+.warn { color: var(--bad); }
+
+/* 연습 결과 표시 */
+.result { min-height: 1.5rem; font-weight: 600; }
+.result.good { color: var(--good); }
+.result.bad { color: var(--bad); }
+.key.expect { border: 2px dashed var(--accent); }
+.key.wrong { border: 2px solid var(--bad); }
