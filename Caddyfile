@@ -7,6 +7,8 @@
 
 	header {
 		X-Content-Type-Options nosniff
+		# 배포 후 일부 파일만 예전 것이 남지 않게: 브라우저가 매번 서버에 바뀌었는지 묻는다 (안 바뀌었으면 304로 짧게 끝남)
+		Cache-Control "no-cache"
 		Referrer-Policy no-referrer
 		# 외부 CDN·폰트를 쓰지 않는다는 규칙(CLAUDE.md 3)을 브라우저에서도 강제: 자기 주소의 파일만 허용
 		Content-Security-Policy "default-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'"
