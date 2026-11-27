@@ -10,7 +10,7 @@
 <body>
   <header class="top">
     <div>
-      <h1 data-i18n="app.title"></h1>
+      <h1><a class="brand" href="#/" data-i18n="app.title"></a></h1>
       <p class="sub" data-i18n="app.subtitle"></p>
     </div>
     <div class="controls">
@@ -28,13 +28,20 @@
     </div>
   </header>
 
-  <nav class="tabs">
-    <button class="tab active" data-view="keyTest" data-i18n="nav.keyTest"></button>
-    <button class="tab" data-view="fingering" data-i18n="nav.fingering"></button>
-    <button class="tab" disabled><span data-i18n="nav.playing"></span> · <span data-i18n="common.comingSoon"></span></button>
+  <!-- 메뉴: 주소(#/...)로 페이지를 바꾼다. 준비 중인 기능은 링크 없이 표시만 (CLAUDE.md 규칙 8) -->
+  <nav class="tabs" aria-label="menu">
+    <a class="tab" href="#/" data-route="" data-i18n="nav.home"></a>
+    <a class="tab" href="#/guide" data-route="guide" data-i18n="nav.guide"></a>
+    <a class="tab" href="#/keys" data-route="keys" data-i18n="nav.keyTest"></a>
+    <a class="tab" href="#/fingering" data-route="fingering" data-i18n="nav.fingering"></a>
+    <span class="tab disabled"><span data-i18n="nav.playing"></span> · <span data-i18n="common.comingSoon"></span></span>
   </nav>
 
   <main id="view"></main>
+
+  <footer class="foot small muted">
+    <span data-i18n="footer.privacy"></span> · v<span id="appVersion"></span>
+  </footer>
 
   <script type="module" src="src/main.js"></script>
 </body>

@@ -4,6 +4,28 @@ export default {
   "app.subtitle": "自己也能检查指法和音准", // 확인 필요
   "common.comingSoon": "即将推出", // 확인 필요: "准备中"이 더 자연스러운지
 
+  "nav.home": "首页",
+  "nav.guide": "使用说明",
+  "footer.privacy": "不保存声音 · 记录只保存在这台设备上", // 확인 필요
+  "status.available": "可以使用",
+
+  "home.hero": "一个人也能练习单簧管指法", // 확인 필요
+  "home.lead": "按照屏幕上的音按好指法，马上就能知道对不对、哪个键需要改。现在用电脑键盘模拟单簧管的按键，以后会连接每个键都装有传感器的单簧管模型。", // 확인 필요
+  "home.start": "开始指法练习",
+  "home.guide": "查看使用说明",
+  "home.cardsTitle": "可以做什么",
+  "home.card.fingering.title": "指法练习",
+  "home.card.fingering.desc": "练习每个目标音对应的手指组合，不需要发声。", // 확인 필요
+  "home.judgeNotReady": "评分（判定）功能还在准备中，现在只能查看画面流程。", // 확인 필요
+  "home.card.keys.title": "按键检查", // 확인 필요
+  "home.card.keys.desc": "查看按下了哪些键，以及这个指法是什么音。", // 확인 필요
+  "home.card.playing.title": "音准演奏练习", // 확인 필요
+  "home.card.playing.desc": "真正吹奏，同时检查指法和音准。", // 확인 필요
+  "home.card.sensor.title": "连接传感器单簧管", // 확인 필요
+  "home.card.sensor.desc": "通过 USB 连接每个键都装有传感器的单簧管模型。", // 확인 필요
+  "home.privacyTitle": "个人信息",
+  "home.privacy": "不会录制或保存声音，也不收集姓名、学校或联系方式。练习记录（数字）只保存在这台设备的浏览器里，可以自己下载 CSV 或删除。", // 확인 필요
+
   "nav.keyTest": "按键检查", // 확인 필요
   "nav.fingering": "指法练习",
   "nav.playing": "音准演奏练习", // 확인 필요
