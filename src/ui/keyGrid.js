@@ -31,6 +31,35 @@ export function paintKeys(container, state, { expected = [], wrong = [] } = {}) 
   });
 }
 
+// 마우스 클릭·터치로 키 누르기. container 안의 data-key 요소(격자 칸, 클라리넷 그림)를 누르면
+// "virtualkey" 이벤트를 보낸다. 입력 쪽(가상 보드)이 이 이벤트를 받아 키보드와 똑같이 처리한다.
+// 손가락을 떼면(pointerup) 어디서 떼든 그 키를 뗀다 (꾹 누르기 모드용). 돌려주는 함수로 정리.
+export function enablePointerKeys(container) {
+  const send = (id, down) => window.dispatchEvent(new CustomEvent("virtualkey", { detail: { id, down } }));
+  let held = null;
+  const onDown = (e) => {
+    const el = e.target.closest?.("[data-key]");
+    if (!el || !container.contains(el)) return;
+    e.preventDefault(); // 글자 선택·확대 막기
+    held = el.dataset.key;
+    send(held, true);
+  };
+  const onUp = () => {
+    if (held === null) return;
+    send(held, false);
+    held = null;
+  };
+  container.addEventListener("pointerdown", onDown);
+  window.addEventListener("pointerup", onUp);
+  window.addEventListener("pointercancel", onUp);
+  return () => {
+    onUp();
+    container.removeEventListener("pointerdown", onDown);
+    window.removeEventListener("pointerup", onUp);
+    window.removeEventListener("pointercancel", onUp);
+  };
+}
+
 export function labelsOf(ids) {
   return KEYS.filter((k) => ids.includes(k.id)).map((k) => k.label);
 }

@@ -97,20 +97,26 @@ h2 { font-size: 1rem; margin: 0 0 10px; }
 .controls label { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
 
 /* 개념도 + 내용 두 칸 (좁은 화면에서는 한 칸) */
-.split { display: grid; grid-template-columns: 200px 1fr; gap: 16px; align-items: start; }
+.split { display: grid; grid-template-columns: 230px 1fr; gap: 16px; align-items: start; }
 .split > .panel, .split > div > .panel:last-child { margin-bottom: 16px; }
 @media (max-width: 640px) { .split { grid-template-columns: 1fr; } .dia svg { max-height: 360px; } }
 
-/* 클라리넷 개념도 */
+/* 클라리넷 그림: 실제 악기처럼 몸통은 어두운색 (라이트·다크 공통) */
 .dia { margin: 0; text-align: center; }
-.dia svg { width: 100%; max-width: 170px; height: auto; }
-.dia .tube { fill: var(--bg); stroke: var(--line); stroke-width: 1.5; }
-.dia [data-key] { fill: var(--panel); stroke: var(--muted); stroke-width: 1.2; }
+.dia svg { width: 100%; max-width: 210px; height: auto; touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+.dia .body { fill: #2b2536; stroke: #6b6380; stroke-width: 1.2; }
+.dia .metal { fill: #c9c3d6; }
+.dia .trim { stroke: #6b6380; stroke-width: 1.2; }
+.dia .open { fill: #1c1824; stroke: #6b6380; stroke-width: 1.2; }
+.dia .ring { fill: none; stroke: #b9b2c8; stroke-width: 2; }
+.dia [data-key] { fill: #3d3550; stroke: #a49cb8; stroke-width: 1.2; cursor: pointer; }
+.dia [data-key]:hover { fill: #51466b; }
 .dia [data-key].on { fill: var(--on); stroke: var(--on); }
-.dia [data-key].expect { stroke: var(--accent); stroke-width: 2.5; stroke-dasharray: 4 2; }
-.dia [data-key].wrong { stroke: var(--bad); stroke-width: 3; stroke-dasharray: none; }
-.dia text { font-size: 8px; text-anchor: middle; fill: var(--text); pointer-events: none; }
-.dia text.side { fill: var(--muted); font-size: 8px; }
+.dia [data-key].expect { stroke: #6fe0c0; stroke-width: 2.5; stroke-dasharray: 4 2; }
+.dia [data-key].wrong { stroke: #ff6b6b; stroke-width: 3; stroke-dasharray: none; }
+.dia text { font-size: 8px; text-anchor: middle; fill: #eee9f6; pointer-events: none; font-weight: 600; }
+.dia text.side { fill: var(--muted); font-weight: 400; }
+.key { cursor: pointer; user-select: none; -webkit-user-select: none; touch-action: manipulation; }
 
 /* 신호 기록 */
 .log {
@@ -168,3 +174,22 @@ a.btn.primary { color: #fff; }
   .kb-row.r2 { padding-left: 8px; } .kb-row.r3 { padding-left: 18px; }
   .cap.space { width: 150px; margin-left: 60px; }
 }
+
+/* 디버그 페이지 */
+.mono { font-family: ui-monospace, Menlo, monospace; }
+.big { font-size: 1.6rem; font-weight: 700; }
+.log.tall { min-height: 15em; }
+.row.spread { justify-content: space-between; align-items: center; }
+.row.spread h3 { margin: 0; }
+#manualLine { padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: inherit; width: 9rem; }
+.status { font-weight: 600; color: var(--muted); }
+.status.connected { color: var(--good); }
+.status.error { color: var(--bad); }
+.tab.dev { border-style: dashed; }
+.usb-src .dia [data-key] { pointer-events: none; cursor: default; }
+.table-wrap { overflow-x: auto; }
+table.check { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+table.check th, table.check td { padding: 5px 8px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+table.check th { color: var(--muted); font-weight: 500; }
+table.check tr.on td { background: color-mix(in srgb, var(--on) 25%, transparent); }
+table.check tr.ok .result { color: var(--good); font-weight: 600; }

@@ -4,10 +4,10 @@ import { APP_VERSION } from "./version.js";
 import { BoardInput } from "./input/boardInput.js";
 import { KeyboardBoard } from "./input/keyboardBoard.js";
 import { startRouter } from "./ui/router.js";
-import { mountHomeView } from "./ui/homeView.js";
 import { mountGuideView } from "./ui/guideView.js";
 import { mountKeyTestView } from "./ui/keyTestView.js";
 import { mountFingeringPracticeView } from "./ui/fingeringPracticeView.js";
+import { mountDebugView } from "./ui/debugView.js";
 
 const lang = loadLang();
 document.documentElement.lang = lang;
@@ -21,6 +21,7 @@ applyI18n();
 // ── 입력 ──
 // 지금은 키보드가 가상 센서 보드 역할을 한다. 진짜 보드가 준비되면 이 줄만 바꾼다:
 //   const input = new BoardInput("sensor", new SerialLineSource());
+// (진짜 보드 연결 시험은 디버그 페이지 #/debug 에서 먼저 한다)
 const KEY_MODE_STORAGE = "keyMode";
 let keyMode = "hold";
 try { if (localStorage.getItem(KEY_MODE_STORAGE) === "toggle") keyMode = "toggle"; } catch (_) {}
@@ -41,10 +42,11 @@ keyModeSelect.addEventListener("change", () => {
 startRouter({
   viewEl: document.getElementById("view"),
   input,
+  defaultRoute: "keys",
   routes: {
-    "": { mount: mountHomeView, titleKey: null },
     guide: { mount: mountGuideView, titleKey: "nav.guide" },
     keys: { mount: mountKeyTestView, titleKey: "nav.keyTest" },
     fingering: { mount: mountFingeringPracticeView, titleKey: "nav.fingering" },
+    debug: { mount: mountDebugView, titleKey: "nav.debug" },
   },
 });

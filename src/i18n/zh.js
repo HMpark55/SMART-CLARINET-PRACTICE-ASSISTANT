@@ -4,33 +4,14 @@ export default {
   "app.subtitle": "自己也能检查指法和音准", // 확인 필요
   "common.comingSoon": "即将推出", // 확인 필요: "准备中"이 더 자연스러운지
 
-  "nav.home": "首页",
   "nav.guide": "使用说明",
   "footer.privacy": "不保存声音 · 记录只保存在这台设备上", // 확인 필요
-  "status.available": "可以使用",
-
-  "home.hero": "一个人也能练习单簧管指法", // 확인 필요
-  "home.lead": "按照屏幕上的音按好指法，马上就能知道对不对、哪个键需要改。现在用电脑键盘模拟单簧管的按键，以后会连接每个键都装有传感器的单簧管模型。", // 확인 필요
-  "home.start": "开始指法练习",
-  "home.guide": "查看使用说明",
-  "home.cardsTitle": "可以做什么",
-  "home.card.fingering.title": "指法练习",
-  "home.card.fingering.desc": "练习每个目标音对应的手指组合，不需要发声。", // 확인 필요
-  "home.judgeNotReady": "评分（判定）功能还在准备中，现在只能查看画面流程。", // 확인 필요
-  "home.card.keys.title": "按键检查", // 확인 필요
-  "home.card.keys.desc": "查看按下了哪些键，以及这个指法是什么音。", // 확인 필요
-  "home.card.playing.title": "音准演奏练习", // 확인 필요
-  "home.card.playing.desc": "真正吹奏，同时检查指法和音准。", // 확인 필요
-  "home.card.sensor.title": "连接传感器单簧管", // 확인 필요
-  "home.card.sensor.desc": "通过 USB 连接每个键都装有传感器的单簧管模型。", // 확인 필요
-  "home.privacyTitle": "个人信息",
-  "home.privacy": "不会录制或保存声音，也不收集姓名、学校或联系方式。练习记录（数字）只保存在这台设备的浏览器里，可以自己下载 CSV 或删除。", // 확인 필요
 
   "guide.title": "使用说明",
   "guide.ready.title": "1. 准备",
   "guide.ready.body": "只需要 Chrome 浏览器和键盘。可以在右上角选择语言和键盘输入方式。", // 확인 필요
   "guide.keys.title": "2. 键盘 = 单簧管按键", // 확인 필요
-  "guide.keys.body": "每个键盘按键对应单簧管的一个音孔或按键。左手音孔是 F D S，右手音孔是 J K L，背面拇指孔是 V。只有彩色边框的其余按键是杠杆键。", // 확인 필요
+  "guide.keys.body": "每个键盘按键对应单簧管的一个音孔或按键。左手音孔是 F D S，右手音孔是 J K L，背面拇指孔是 V。只有彩色边框的其余按键是杠杆键。也可以用鼠标点击图中的按键。", // 확인 필요
   "guide.keys.try": "在按键检查里试试 →", // 확인 필요
   "guide.spaceKey": "确认（指法练习）",
   "guide.mode.title": "3. 输入方式",
@@ -42,14 +23,45 @@ export default {
   "guide.practice.2": "按照屏幕上的音按好指法。打开提示后，要按的键会显示为虚线。", // 확인 필요
   "guide.practice.3": "按空格键（或确认按钮）。如果错了，改正红框的键再确认。", // 확인 필요
   "guide.practice.4": "8 个音结束后查看结果，可以把记录下载为 CSV。",
-  "guide.records.title": "5. 记录与个人信息",
-  "guide.records.1": "记录只保存在这台设备的浏览器里，其他设备或浏览器看不到。",
-  "guide.records.2": "随时可以用“删除我的记录”删除。不会保存声音、姓名、学校和联系方式。",
-  "guide.records.3": "用键盘练习的记录会被标记为测试数据，以后不会和传感器单簧管的记录混在一起。", // 확인 필요
-  "guide.trouble.title": "6. 遇到问题时",
+  "guide.startPractice": "开始指法练习",
+  "guide.trouble.title": "5. 遇到问题时",
   "guide.trouble.1": "同时按很多键时有些键不亮 → 键盘能同时识别的按键数量可能有限，请试试切换方式。", // 확인 필요
   "guide.trouble.2": "按键没有反应 → 光标在输入框里时按键不算指法，请先点击一下空白处。", // 확인 필요
   "guide.trouble.3": "有键一直处于按下状态 → 请按 Esc。",
+
+  "nav.debug": "调试（开发用）", // 확인 필요
+  "debug.title": "硬件调试",
+  "debug.devOnly": "开发用",
+  "debug.intro": "用 USB-C 连接传感器板后，在这里确认信号是否真的传进来。逐个按下再松开每个键，直到下面的检查表全部显示 ✓。", // 확인 필요
+  "debug.source.title": "输入来源",
+  "debug.source.virtual": "模拟板（键盘·鼠标）", // 확인 필요
+  "debug.source.usb": "USB 电路板", // 확인 필요
+  "debug.noSerial": "此浏览器无法使用 USB 连接（Web Serial）。请用电脑版 Chrome 通过 https 地址打开。", // 확인 필요
+  "debug.connect": "连接电路板", // 확인 필요
+  "debug.disconnect": "断开连接",
+  "debug.status.connected": "已连接",
+  "debug.status.disconnected": "未连接",
+  "debug.status.error": "错误",
+  "debug.firmwareNote": "每当按键状态变化时，电路板必须发送一行 \"K <十六进制>\"（SPEC.md 第2节）。其他行会以 ? 显示并被忽略。", // 확인 필요
+  "debug.sendLine": "输入信号行", // 확인 필요
+  "debug.manualNote": "没有电路板也能测试：直接输入 \"K 7\" 这样的信号行。", // 확인 필요
+  "debug.state.title": "当前状态",
+  "debug.state.bitsNote": "从左到右为第 23 → 0 位。1 = 按下。位号与下方检查表的“通道”相同。", // 확인 필요
+  "debug.log.title": "收到的信号行", // 확인 필요
+  "debug.log.stats": "收到 {lines} 行 · 格式错误 {bad} 行", // 확인 필요
+  "debug.check.title": "按键检查表", // 확인 필요
+  "debug.check.reset": "重新开始",
+  "debug.check.howto": "逐个按下再松开每个键。按下和松开都收到后显示 ✓。如果其他键也一起亮了，说明接线接错了。", // 확인 필요
+  "debug.check.progress": "已确认 {done} / {total}",
+  "debug.col.bit": "通道",
+  "debug.col.key": "按键",
+  "debug.col.kbd": "键盘",
+  "debug.col.now": "当前",
+  "debug.col.presses": "按下次数", // 확인 필요
+  "debug.col.result": "结果",
+  "debug.result.none": "—",
+  "debug.result.pressed": "仅确认按下", // 확인 필요
+  "debug.result.ok": "✓ 正常",
 
   "nav.keyTest": "按键检查", // 확인 필요
   "nav.fingering": "指法练习",
@@ -59,7 +71,7 @@ export default {
   "input.keyboard": "键盘（测试用）",
   "input.sensor": "传感器板", // 확인 필요
 
-  "keyTest.hint": "每个键盘按键相当于一个传感器。按下按键即表示盖住对应的音孔或按键。Esc = 全部松开", // 확인 필요
+  "keyTest.hint": "每个键盘按键相当于一个传感器。可以按键盘，也可以用鼠标点击图中的按键。Esc = 全部松开", // 확인 필요
   "keyTest.pressed": "按下的键",
   "keyTest.none": "无",
   "keyTest.note": "指法表中的音（记谱音）", // 확인 필요
