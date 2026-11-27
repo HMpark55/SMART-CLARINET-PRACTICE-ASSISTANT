@@ -13,7 +13,8 @@ python3 -m http.server 8000
 
 ## 현재 상태
 
-- 키 상태 확인 화면 (키보드 입력) — 동작
+- 키보드 = 가상 센서 보드 (꾹 누르기 / 토글, Esc = 모두 떼기) — 동작. 진짜 보드와 같은 신호 줄(`K <16진수>`)을 쓰므로 나중에 입력 출처만 바꾸면 된다 (SPEC.md 2절)
+- 키 상태 확인 화면 (클라리넷 개념도, 신호 기록) — 동작
 - 운지 연습 화면, 기록·CSV·내 기록 삭제 — 동작. **판정 함수(`src/feedback/feedback.js`)는 세진이 작성 예정**이라 지금은 "판정 준비 중"으로 표시되고 기록하지 않음
 - 음정 연주 연습, 센서 보드 연결 — 준비 중
 
@@ -22,4 +23,5 @@ python3 -m http.server 8000
 ```
 node docs/test-fingerings.mjs
 node docs/test-csv.mjs
+node docs/test-board.mjs
 ```
