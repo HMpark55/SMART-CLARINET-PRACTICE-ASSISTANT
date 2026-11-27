@@ -174,3 +174,22 @@ a.btn.primary { color: #fff; }
   .kb-row.r2 { padding-left: 8px; } .kb-row.r3 { padding-left: 18px; }
   .cap.space { width: 150px; margin-left: 60px; }
 }
+
+/* 디버그 페이지 */
+.mono { font-family: ui-monospace, Menlo, monospace; }
+.big { font-size: 1.6rem; font-weight: 700; }
+.log.tall { min-height: 15em; }
+.row.spread { justify-content: space-between; align-items: center; }
+.row.spread h3 { margin: 0; }
+#manualLine { padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: inherit; width: 9rem; }
+.status { font-weight: 600; color: var(--muted); }
+.status.connected { color: var(--good); }
+.status.error { color: var(--bad); }
+.tab.dev { border-style: dashed; }
+.usb-src .dia [data-key] { pointer-events: none; cursor: default; }
+.table-wrap { overflow-x: auto; }
+table.check { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+table.check th, table.check td { padding: 5px 8px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+table.check th { color: var(--muted); font-weight: 500; }
+table.check tr.on td { background: color-mix(in srgb, var(--on) 25%, transparent); }
+table.check tr.ok .result { color: var(--good); font-weight: 600; }

@@ -29,6 +29,40 @@ export default {
   "guide.trouble.2": "按键没有反应 → 光标在输入框里时按键不算指法，请先点击一下空白处。", // 확인 필요
   "guide.trouble.3": "有键一直处于按下状态 → 请按 Esc。",
 
+  "nav.debug": "调试（开发用）", // 확인 필요
+  "debug.title": "硬件调试",
+  "debug.devOnly": "开发用",
+  "debug.intro": "用 USB-C 连接传感器板后，在这里确认信号是否真的传进来。逐个按下再松开每个键，直到下面的检查表全部显示 ✓。", // 확인 필요
+  "debug.source.title": "输入来源",
+  "debug.source.virtual": "模拟板（键盘·鼠标）", // 확인 필요
+  "debug.source.usb": "USB 电路板", // 확인 필요
+  "debug.noSerial": "此浏览器无法使用 USB 连接（Web Serial）。请用电脑版 Chrome 通过 https 地址打开。", // 확인 필요
+  "debug.connect": "连接电路板", // 확인 필요
+  "debug.disconnect": "断开连接",
+  "debug.status.connected": "已连接",
+  "debug.status.disconnected": "未连接",
+  "debug.status.error": "错误",
+  "debug.firmwareNote": "每当按键状态变化时，电路板必须发送一行 \"K <十六进制>\"（SPEC.md 第2节）。其他行会以 ? 显示并被忽略。", // 확인 필요
+  "debug.sendLine": "输入信号行", // 확인 필요
+  "debug.manualNote": "没有电路板也能测试：直接输入 \"K 7\" 这样的信号行。", // 확인 필요
+  "debug.state.title": "当前状态",
+  "debug.state.bitsNote": "从左到右为第 23 → 0 位。1 = 按下。位号与下方检查表的“通道”相同。", // 확인 필요
+  "debug.log.title": "收到的信号行", // 확인 필요
+  "debug.log.stats": "收到 {lines} 行 · 格式错误 {bad} 行", // 확인 필요
+  "debug.check.title": "按键检查表", // 확인 필요
+  "debug.check.reset": "重新开始",
+  "debug.check.howto": "逐个按下再松开每个键。按下和松开都收到后显示 ✓。如果其他键也一起亮了，说明接线接错了。", // 확인 필요
+  "debug.check.progress": "已确认 {done} / {total}",
+  "debug.col.bit": "通道",
+  "debug.col.key": "按键",
+  "debug.col.kbd": "键盘",
+  "debug.col.now": "当前",
+  "debug.col.presses": "按下次数", // 확인 필요
+  "debug.col.result": "结果",
+  "debug.result.none": "—",
+  "debug.result.pressed": "仅确认按下", // 확인 필요
+  "debug.result.ok": "✓ 正常",
+
   "nav.keyTest": "按键检查", // 확인 필요
   "nav.fingering": "指法练习",
   "nav.playing": "音准演奏练习", // 확인 필요
