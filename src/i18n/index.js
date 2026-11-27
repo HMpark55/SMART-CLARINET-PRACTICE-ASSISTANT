@@ -25,6 +25,8 @@ export function setLang(lang) {
   try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) {}
   document.documentElement.lang = lang;
   applyI18n();
+  // 직접 그리는 화면(음 이름 등)도 다시 그리도록 알린다.
+  document.dispatchEvent(new CustomEvent("langchange", { detail: lang }));
 }
 
 export function getLang() {
