@@ -31,12 +31,7 @@ export function mountGuideView(container) {
       <section class="panel">
         <h3 data-i18n="guide.practice.title"></h3>
         ${list("guide.practice", 4, "ol")}
-        <a class="btn primary" href="#/fingering" data-i18n="home.start"></a>
-      </section>
-
-      <section class="panel">
-        <h3 data-i18n="guide.records.title"></h3>
-        ${list("guide.records", 3)}
+        <a class="btn primary" href="#/fingering" data-i18n="guide.startPractice"></a>
       </section>
 
       <section class="panel">

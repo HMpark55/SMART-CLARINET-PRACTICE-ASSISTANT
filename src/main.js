@@ -4,7 +4,6 @@ import { APP_VERSION } from "./version.js";
 import { BoardInput } from "./input/boardInput.js";
 import { KeyboardBoard } from "./input/keyboardBoard.js";
 import { startRouter } from "./ui/router.js";
-import { mountHomeView } from "./ui/homeView.js";
 import { mountGuideView } from "./ui/guideView.js";
 import { mountKeyTestView } from "./ui/keyTestView.js";
 import { mountFingeringPracticeView } from "./ui/fingeringPracticeView.js";
@@ -41,8 +40,8 @@ keyModeSelect.addEventListener("change", () => {
 startRouter({
   viewEl: document.getElementById("view"),
   input,
+  defaultRoute: "keys",
   routes: {
-    "": { mount: mountHomeView, titleKey: null },
     guide: { mount: mountGuideView, titleKey: "nav.guide" },
     keys: { mount: mountKeyTestView, titleKey: "nav.keyTest" },
     fingering: { mount: mountFingeringPracticeView, titleKey: "nav.fingering" },
