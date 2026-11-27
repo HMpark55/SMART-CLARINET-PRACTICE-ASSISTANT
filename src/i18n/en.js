@@ -11,7 +11,7 @@ export default {
   "input.keyboard": "Keyboard (test)",
   "input.sensor": "Sensor board",
 
-  "keyTest.hint": "Press fingerings on the keyboard. A key counts as pressed while you hold it.",
+  "keyTest.hint": "Each keyboard key acts as one sensor. Pressing a key counts as covering that hole or key. Esc = release all.",
   "keyTest.pressed": "Pressed keys",
   "keyTest.none": "None",
   "keyTest.note": "Note in fingering chart (written)",
@@ -47,6 +47,15 @@ export default {
   "records.csvAttempts": "Attempts CSV",
   "records.delete": "Delete my records",
   "records.confirmDelete": "Delete all practice records and the anonymous code stored on this device?",
+
+  "keyMode.label": "Keyboard input",
+  "keyMode.hold": "Hold",
+  "keyMode.toggle": "Toggle (press once = cover)",
+  "keyTest.signal": "Sensor signal (keyboard virtual board for now)",
+  "keyTest.signalHint": "Lines sent by the board. Each bit of the hex number after K is one key. Use this to check wiring when the real board is connected.",
+  "practice.escHint": "Esc = release all keys",
+  "diagram.caption": "Schematic — not actual positions or scale",
+  "diagram.back": "(back)",
 
   "keyGroup.hole": "Tone holes",
   "keyGroup.lever": "Keys",

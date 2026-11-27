@@ -12,7 +12,7 @@ export default {
   "input.keyboard": "键盘（测试用）",
   "input.sensor": "传感器板", // 확인 필요
 
-  "keyTest.hint": "用键盘按指法。按住期间算作按下。", // 확인 필요
+  "keyTest.hint": "每个键盘按键相当于一个传感器。按下按键即表示盖住对应的音孔或按键。Esc = 全部松开", // 확인 필요
   "keyTest.pressed": "按下的键",
   "keyTest.none": "无",
   "keyTest.note": "指法表中的音（记谱音）", // 확인 필요
@@ -48,6 +48,15 @@ export default {
   "records.csvAttempts": "尝试 CSV", // 확인 필요
   "records.delete": "删除我的记录",
   "records.confirmDelete": "要删除这台设备上保存的所有练习记录和匿名代码吗？",
+
+  "keyMode.label": "键盘输入",
+  "keyMode.hold": "按住", // 확인 필요
+  "keyMode.toggle": "切换（按一次 = 盖住）", // 확인 필요
+  "keyTest.signal": "传感器信号（目前为键盘模拟板）", // 확인 필요
+  "keyTest.signalHint": "电路板发送的行。K 后面十六进制数的每一位对应一个键。连接真实电路板后可在这里检查接线。", // 확인 필요
+  "practice.escHint": "Esc = 松开所有键", // 확인 필요
+  "diagram.caption": "示意图——不是实际位置和比例", // 확인 필요
+  "diagram.back": "（背面）",
 
   "keyGroup.hole": "音孔",
   "keyGroup.lever": "按键",

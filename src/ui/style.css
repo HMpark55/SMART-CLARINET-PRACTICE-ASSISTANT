@@ -35,7 +35,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
-.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 12px; }
 h1 { margin: 0; font-size: 1.5rem; }
 .sub { margin: 4px 0 0; color: var(--muted); }
 select, button { font: inherit; color: inherit; }
@@ -88,3 +88,29 @@ h2 { font-size: 1rem; margin: 0 0 10px; }
 .result.bad { color: var(--bad); }
 .key.expect { border: 2px dashed var(--accent); }
 .key.wrong { border: 2px solid var(--bad); }
+
+/* 헤더 오른쪽 설정 */
+.controls { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.controls label { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+
+/* 개념도 + 내용 두 칸 (좁은 화면에서는 한 칸) */
+.split { display: grid; grid-template-columns: 200px 1fr; gap: 16px; align-items: start; }
+.split > .panel, .split > div > .panel:last-child { margin-bottom: 16px; }
+@media (max-width: 640px) { .split { grid-template-columns: 1fr; } .dia svg { max-height: 360px; } }
+
+/* 클라리넷 개념도 */
+.dia { margin: 0; text-align: center; }
+.dia svg { width: 100%; max-width: 170px; height: auto; }
+.dia .tube { fill: var(--bg); stroke: var(--line); stroke-width: 1.5; }
+.dia [data-key] { fill: var(--panel); stroke: var(--muted); stroke-width: 1.2; }
+.dia [data-key].on { fill: var(--on); stroke: var(--on); }
+.dia [data-key].expect { stroke: var(--accent); stroke-width: 2.5; stroke-dasharray: 4 2; }
+.dia [data-key].wrong { stroke: var(--bad); stroke-width: 3; stroke-dasharray: none; }
+.dia text { font-size: 8px; text-anchor: middle; fill: var(--text); pointer-events: none; }
+.dia text.side { fill: var(--muted); font-size: 8px; }
+
+/* 신호 기록 */
+.log {
+  margin: 0; min-height: 7.5em; padding: 8px; border-radius: 8px; background: var(--bg);
+  font-family: ui-monospace, Menlo, monospace; font-size: 0.85rem; white-space: pre;
+}

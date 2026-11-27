@@ -12,6 +12,7 @@ import {
 import { t, getLang, applyI18n } from "../i18n/index.js";
 import { noteName, noteLetter } from "./noteName.js";
 import { keyGridHtml, paintKeys, labelsOf } from "./keyGrid.js";
+import { clarinetDiagramHtml } from "./clarinetDiagram.js";
 import { mountRecordsPanel } from "./recordsPanel.js";
 
 const NEXT_DELAY_MS = 700; // 정답을 보여준 뒤 다음 음으로 넘어가기까지
@@ -78,6 +79,8 @@ export function mountFingeringPracticeView(container, input) {
     stats = { attempts: 0, solved: 0, judged: true, solvedTimes: [] };
     phase = "run";
     container.innerHTML = `
+      <div class="split">
+      <section class="panel">${clarinetDiagramHtml()}</section>
       <section class="panel center">
         <div class="muted" id="progress"></div>
         <div class="note-box" id="target"></div>
@@ -88,7 +91,9 @@ export function mountFingeringPracticeView(container, input) {
           <button class="btn" id="skip" data-i18n="practice.skip"></button>
           <button class="btn" id="stop" data-i18n="practice.stop"></button>
         </div>
+        <p class="small muted" data-i18n="practice.escHint"></p>
       </section>
+      </div>
       ${keyGridHtml()}`;
     applyI18n(container);
     container.querySelector("#submit").onclick = submit;

@@ -21,8 +21,9 @@ export function keyGridHtml() {
 }
 
 // state: { 키ID: true/false }, expected / wrong: 키 ID 목록 (없으면 표시 안 함)
+// 격자(.key)와 클라리넷 개념도(SVG 도형) 모두 data-key가 있으므로 함께 칠해진다.
 export function paintKeys(container, state, { expected = [], wrong = [] } = {}) {
-  container.querySelectorAll(".key").forEach((el) => {
+  container.querySelectorAll("[data-key]").forEach((el) => {
     const id = el.dataset.key;
     el.classList.toggle("on", Boolean(state[id]));
     el.classList.toggle("expect", expected.includes(id));

@@ -11,7 +11,7 @@ export default {
   "input.keyboard": "키보드 (시험용)",
   "input.sensor": "센서 보드",
 
-  "keyTest.hint": "키보드로 운지를 눌러 보세요. 누르고 있는 동안 눌린 것으로 봅니다.",
+  "keyTest.hint": "키보드 키 하나가 센서 하나예요. 키를 누르면 그 구멍·키를 덮은 것으로 봐요. Esc = 모두 떼기",
   "keyTest.pressed": "눌린 키",
   "keyTest.none": "없음",
   "keyTest.note": "운지표의 음 (써진 음)",
@@ -47,6 +47,15 @@ export default {
   "records.csvAttempts": "시도 CSV",
   "records.delete": "내 기록 삭제",
   "records.confirmDelete": "이 기기에 저장된 연습 기록과 익명 코드를 모두 지울까요?",
+
+  "keyMode.label": "키보드 입력",
+  "keyMode.hold": "꾹 누르기",
+  "keyMode.toggle": "토글 (한 번 = 덮기)",
+  "keyTest.signal": "센서 신호 (지금은 키보드 가상 보드)",
+  "keyTest.signalHint": "보드가 보내는 줄. K 뒤의 16진수에서 비트 하나가 키 하나예요. 진짜 보드를 연결하면 여기서 배선을 확인해요.",
+  "practice.escHint": "Esc = 모든 키 떼기",
+  "diagram.caption": "개념도 — 실제 위치·비율이 아니에요",
+  "diagram.back": "(뒤)",
 
   "keyGroup.hole": "구멍",
   "keyGroup.lever": "레버 키",
