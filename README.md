@@ -18,6 +18,11 @@ python3 -m http.server 8000
 
 크롬에서 http://localhost:8000 을 연다. `file://`로 열면 동작하지 않는다 (ES 모듈·마이크·Web Serial 제한).
 
+## 배포 (Railway)
+
+`main` 브랜치가 Railway로 배포된다. 저장소의 `Dockerfile`이 Caddy 웹서버로 `index.html`과 `src/`만 내보낸다 (`docs/`, 명세 문서는 배포하지 않음).
+`Caddyfile`의 보안 헤더(CSP)가 외부 파일 로드를 막아, "외부 CDN·폰트 금지" 규칙을 브라우저에서도 강제한다.
+
 ## 현재 상태
 
 | 기능 | 상태 |
