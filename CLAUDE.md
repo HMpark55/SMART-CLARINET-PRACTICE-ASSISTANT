@@ -27,6 +27,7 @@
 - 새 코드를 쓰면 무엇을 왜 그렇게 했는지 3~5줄로 설명한다. 학생이 코드를 읽고 설명할 수 있어야 한다.
 - 작은 단위로 자주 `git commit` 한다. 커밋 메시지는 무엇을 했는지 알 수 있게 쓴다. 이 기록은 개발 과정의 증거가 된다.
 - 한 번에 큰 파일 여러 개를 갈아엎지 않는다. 변경 전에 계획을 짧게 보여준다.
+- `main`에 바로 올리지 않는다. 브랜치에서 작업하고 PR로 합친다 (CONTRIBUTING.md). 저장소는 공개이므로 개인정보를 올리지 않는다.
 
 ## 폴더 구조 (초안)
 
@@ -36,13 +37,14 @@ CLAUDE.md
 SPEC.md
 src/
   main.js
-  input/        keys.js(24키 정의), inputAdapter.js, keyboardInput.js, serialInput.js(준비 중)
+  input/        keys.js(24키 정의), inputAdapter.js, boardProtocol.js(신호 줄 형식),
+                boardInput.js(신호 줄 → 키 상태), keyboardBoard.js(키보드 가상 보드), serialInput.js(준비 중)
   audio/        mic.js, pitch.js            (세진이 작성)
   feedback/     feedback.js, fingerings.js  (세진이 작성, fingerings.js는 이전 데모에서 이식)
   storage/      records.js, csv.js
   ui/
   i18n/         index.js, ko.js, en.js, zh.js
-docs/           개발 메모, 테스트 기록, 캡처, hardware.md(부품 안내)
+docs/           개발 메모, 테스트 기록, 캡처, hardware.md(부품 안내), test-*.mjs(node 시험)
 ```
 
 ## 실행
