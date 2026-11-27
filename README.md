@@ -14,4 +14,12 @@ python3 -m http.server 8000
 ## 현재 상태
 
 - 키 상태 확인 화면 (키보드 입력) — 동작
-- 운지 연습, 음정 연주 연습, 센서 보드 연결, 기록·CSV — 준비 중
+- 운지 연습 화면, 기록·CSV·내 기록 삭제 — 동작. **판정 함수(`src/feedback/feedback.js`)는 세진이 작성 예정**이라 지금은 "판정 준비 중"으로 표시되고 기록하지 않음
+- 음정 연주 연습, 센서 보드 연결 — 준비 중
+
+## 시험
+
+```
+node docs/test-fingerings.mjs
+node docs/test-csv.mjs
+```
