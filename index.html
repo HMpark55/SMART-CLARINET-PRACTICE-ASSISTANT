@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clarinet Practice</title>
+  <!-- 외부 폰트·CDN 금지 (CLAUDE.md 규칙 3). 시스템 폰트만 쓴다. -->
+  <link rel="stylesheet" href="src/ui/style.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1 data-i18n="app.title"></h1>
+      <p class="sub" data-i18n="app.subtitle"></p>
+    </div>
+    <select id="langSelect" aria-label="language">
+      <option value="ko">한국어</option>
+      <option value="en">English</option>
+      <option value="zh">中文</option>
+    </select>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-view="keyTest" data-i18n="nav.keyTest"></button>
+    <button class="tab" disabled><span data-i18n="nav.fingering"></span> · <span data-i18n="common.comingSoon"></span></button>
+    <button class="tab" disabled><span data-i18n="nav.playing"></span> · <span data-i18n="common.comingSoon"></span></button>
+  </nav>
+
+  <main id="view"></main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

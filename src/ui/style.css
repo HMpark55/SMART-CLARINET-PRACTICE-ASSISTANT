@@ -1,0 +1,62 @@
+:root {
+  --bg: #f6f5f2;
+  --panel: #ffffff;
+  --text: #1d1d1f;
+  --muted: #6b6b70;
+  --line: #dcdad4;
+  --accent: #2f6f5e;
+  --on: #e07a2f;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17171a;
+    --panel: #212125;
+    --text: #ededf0;
+    --muted: #a0a0a8;
+    --line: #34343a;
+    --accent: #6fbfa8;
+    --on: #f0954c;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 16px;
+  max-width: 900px;
+  margin-inline: auto;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+h1 { margin: 0; font-size: 1.5rem; }
+.sub { margin: 4px 0 0; color: var(--muted); }
+select, button { font: inherit; color: inherit; }
+select { padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+.tab {
+  padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--panel); cursor: pointer;
+}
+.tab.active { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.tab:disabled { cursor: default; color: var(--muted); }
+
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.muted { color: var(--muted); }
+
+/* 키 상태 확인 화면 */
+.note-box { font-size: 2.5rem; font-weight: 700; min-height: 3rem; }
+.key-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 8px; }
+.key {
+  border: 1px solid var(--line); border-radius: 8px; padding: 6px; text-align: center;
+  font-size: 0.85rem; transition: background 80ms;
+}
+.key b { display: block; font-size: 1rem; }
+.key.on { background: var(--on); border-color: var(--on); color: #fff; }
+.key .kbd { color: var(--muted); font-size: 0.75rem; }
+.key.on .kbd { color: #fff; }
+h2 { font-size: 1rem; margin: 0 0 10px; }
