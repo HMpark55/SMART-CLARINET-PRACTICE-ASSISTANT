@@ -13,11 +13,19 @@
       <h1 data-i18n="app.title"></h1>
       <p class="sub" data-i18n="app.subtitle"></p>
     </div>
-    <select id="langSelect" aria-label="language">
-      <option value="ko">한국어</option>
-      <option value="en">English</option>
-      <option value="zh">中文</option>
-    </select>
+    <div class="controls">
+      <select id="langSelect" aria-label="language">
+        <option value="ko">한국어</option>
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+      </select>
+      <label class="small muted"><span data-i18n="keyMode.label"></span>
+        <select id="keyModeSelect">
+          <option value="hold" data-i18n="keyMode.hold"></option>
+          <option value="toggle" data-i18n="keyMode.toggle"></option>
+        </select>
+      </label>
+    </div>
   </header>
 
   <nav class="tabs">
