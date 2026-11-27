@@ -26,6 +26,31 @@ export default {
   "home.privacyTitle": "个人信息",
   "home.privacy": "不会录制或保存声音，也不收集姓名、学校或联系方式。练习记录（数字）只保存在这台设备的浏览器里，可以自己下载 CSV 或删除。", // 확인 필요
 
+  "guide.title": "使用说明",
+  "guide.ready.title": "1. 准备",
+  "guide.ready.body": "只需要 Chrome 浏览器和键盘。可以在右上角选择语言和键盘输入方式。", // 확인 필요
+  "guide.keys.title": "2. 键盘 = 单簧管按键", // 확인 필요
+  "guide.keys.body": "每个键盘按键对应单簧管的一个音孔或按键。左手音孔是 F D S，右手音孔是 J K L，背面拇指孔是 V。只有彩色边框的其余按键是杠杆键。", // 확인 필요
+  "guide.keys.try": "在按键检查里试试 →", // 확인 필요
+  "guide.spaceKey": "确认（指法练习）",
+  "guide.mode.title": "3. 输入方式",
+  "guide.mode.1": "按住：按住期间算作盖住，最接近真实手指。", // 확인 필요
+  "guide.mode.2": "切换：按一次盖住，再按一次打开。同时按很多键有困难时使用。", // 확인 필요
+  "guide.mode.3": "Esc：一次松开所有键。",
+  "guide.practice.title": "4. 指法练习步骤",
+  "guide.practice.1": "阅读说明，填写老师给你的匿名代码。",
+  "guide.practice.2": "按照屏幕上的音按好指法。打开提示后，要按的键会显示为虚线。", // 확인 필요
+  "guide.practice.3": "按空格键（或确认按钮）。如果错了，改正红框的键再确认。", // 확인 필요
+  "guide.practice.4": "8 个音结束后查看结果，可以把记录下载为 CSV。",
+  "guide.records.title": "5. 记录与个人信息",
+  "guide.records.1": "记录只保存在这台设备的浏览器里，其他设备或浏览器看不到。",
+  "guide.records.2": "随时可以用“删除我的记录”删除。不会保存声音、姓名、学校和联系方式。",
+  "guide.records.3": "用键盘练习的记录会被标记为测试数据，以后不会和传感器单簧管的记录混在一起。", // 확인 필요
+  "guide.trouble.title": "6. 遇到问题时",
+  "guide.trouble.1": "同时按很多键时有些键不亮 → 键盘能同时识别的按键数量可能有限，请试试切换方式。", // 확인 필요
+  "guide.trouble.2": "按键没有反应 → 光标在输入框里时按键不算指法，请先点击一下空白处。", // 확인 필요
+  "guide.trouble.3": "有键一直处于按下状态 → 请按 Esc。",
+
   "nav.keyTest": "按键检查", // 확인 필요
   "nav.fingering": "指法练习",
   "nav.playing": "音准演奏练习", // 확인 필요

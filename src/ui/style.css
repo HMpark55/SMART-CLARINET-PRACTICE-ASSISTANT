@@ -136,3 +136,35 @@ a.btn.primary { color: #fff; }
 .card.off { opacity: 0.7; }
 .badge { font-size: 0.72rem; font-weight: 500; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
 .badge.ok { border-color: var(--accent); color: var(--accent); }
+
+/* 사용법 */
+.guide h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.guide p, .guide li { line-height: 1.6; }
+.guide ol, .guide ul { padding-left: 1.3rem; margin: 0 0 12px; }
+.guide a:not(.btn) { color: var(--accent); }
+
+/* 키보드 배치 그림 */
+.kb { display: flex; flex-direction: column; gap: 5px; margin: 12px 0 8px; overflow-x: auto; }
+.kb-row { display: flex; gap: 5px; }
+.kb-row.r2 { padding-left: 16px; }
+.kb-row.r3 { padding-left: 36px; }
+.cap {
+  flex: 0 0 auto; width: 52px; min-height: 44px; padding: 4px 2px; border-radius: 6px;
+  border: 1px solid var(--line); background: var(--panel); text-align: center; font-size: 0.7rem;
+}
+.cap b { display: block; font-size: 0.9rem; }
+.cap.empty { color: var(--muted); opacity: 0.55; }
+.cap.hole { background: var(--on); border-color: var(--on); color: #fff; }
+.cap.lever { border: 2px solid var(--accent); color: var(--accent); }
+.cap.space { width: 260px; margin-left: 110px; color: var(--muted); }
+.swatch { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -1px; }
+.swatch.hole { background: var(--on); }
+.swatch.lever { border: 2px solid var(--accent); }
+/* 폭 390px 휴대폰: 패널 안쪽 약 326px에 10칸 (29px × 10 + 간격 3px × 9 = 317px) */
+@media (max-width: 640px) {
+  .kb, .kb-row { gap: 3px; }
+  .cap { width: 29px; min-height: 40px; padding: 3px 0; font-size: 0.5rem; overflow-wrap: anywhere; }
+  .cap b { font-size: 0.78rem; }
+  .kb-row.r2 { padding-left: 8px; } .kb-row.r3 { padding-left: 18px; }
+  .cap.space { width: 150px; margin-left: 60px; }
+}
