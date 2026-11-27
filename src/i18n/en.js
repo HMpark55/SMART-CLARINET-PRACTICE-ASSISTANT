@@ -10,7 +10,7 @@ export default {
   "guide.ready.title": "1. What you need",
   "guide.ready.body": "Just the Chrome browser and a keyboard. Choose the language and keyboard input mode at the top right.",
   "guide.keys.title": "2. Keyboard = clarinet keys",
-  "guide.keys.body": "Each keyboard key is one clarinet hole or key. Left-hand holes are F D S, right-hand holes are J K L, and the back thumb hole is V. The keys with only a colored border are the other (lever) keys.",
+  "guide.keys.body": "Each keyboard key is one clarinet hole or key. Left-hand holes are F D S, right-hand holes are J K L, and the back thumb hole is V. The keys with only a colored border are the other (lever) keys. You can also click the keys in the picture.",
   "guide.keys.try": "Try it in Key check →",
   "guide.spaceKey": "Check (fingering practice)",
   "guide.mode.title": "3. Input modes",
@@ -36,7 +36,7 @@ export default {
   "input.keyboard": "Keyboard (test)",
   "input.sensor": "Sensor board",
 
-  "keyTest.hint": "Each keyboard key acts as one sensor. Pressing a key counts as covering that hole or key. Esc = release all.",
+  "keyTest.hint": "Each keyboard key acts as one sensor. Press keyboard keys or click the keys in the picture. Esc = release all.",
   "keyTest.pressed": "Pressed keys",
   "keyTest.none": "None",
   "keyTest.note": "Note in fingering chart (written)",

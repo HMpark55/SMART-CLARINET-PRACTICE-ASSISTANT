@@ -11,7 +11,7 @@ import {
 } from "../storage/records.js";
 import { t, getLang, applyI18n } from "../i18n/index.js";
 import { noteName, noteLetter } from "./noteName.js";
-import { keyGridHtml, paintKeys, labelsOf } from "./keyGrid.js";
+import { keyGridHtml, paintKeys, labelsOf, enablePointerKeys } from "./keyGrid.js";
 import { clarinetDiagramHtml } from "./clarinetDiagram.js";
 import { mountRecordsPanel } from "./recordsPanel.js";
 
@@ -200,6 +200,7 @@ export function mountFingeringPracticeView(container, input) {
 
   // ── 입력 연결 ──
   const off = input.onChange(paint);
+  const offPointer = enablePointerKeys(container); // 그림·격자를 마우스로 눌러도 입력
   // 버튼에 포커스가 남아 있으면 Space가 그 버튼도 누르므로(keyup 때), keydown·keyup 모두 막는다.
   const onKey = (e) => {
     if (e.code !== "Space" || phase !== "run") return;
@@ -218,6 +219,7 @@ export function mountFingeringPracticeView(container, input) {
     phase = "closed";
     timers.forEach(clearTimeout);
     off();
+    offPointer();
     window.removeEventListener("keydown", onKey);
     window.removeEventListener("keyup", onKey);
     document.removeEventListener("langchange", onLang);

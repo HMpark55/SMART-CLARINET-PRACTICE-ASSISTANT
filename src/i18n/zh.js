@@ -11,7 +11,7 @@ export default {
   "guide.ready.title": "1. 准备",
   "guide.ready.body": "只需要 Chrome 浏览器和键盘。可以在右上角选择语言和键盘输入方式。", // 확인 필요
   "guide.keys.title": "2. 键盘 = 单簧管按键", // 확인 필요
-  "guide.keys.body": "每个键盘按键对应单簧管的一个音孔或按键。左手音孔是 F D S，右手音孔是 J K L，背面拇指孔是 V。只有彩色边框的其余按键是杠杆键。", // 확인 필요
+  "guide.keys.body": "每个键盘按键对应单簧管的一个音孔或按键。左手音孔是 F D S，右手音孔是 J K L，背面拇指孔是 V。只有彩色边框的其余按键是杠杆键。也可以用鼠标点击图中的按键。", // 확인 필요
   "guide.keys.try": "在按键检查里试试 →", // 확인 필요
   "guide.spaceKey": "确认（指法练习）",
   "guide.mode.title": "3. 输入方式",
@@ -37,7 +37,7 @@ export default {
   "input.keyboard": "键盘（测试用）",
   "input.sensor": "传感器板", // 확인 필요
 
-  "keyTest.hint": "每个键盘按键相当于一个传感器。按下按键即表示盖住对应的音孔或按键。Esc = 全部松开", // 확인 필요
+  "keyTest.hint": "每个键盘按键相当于一个传感器。可以按键盘，也可以用鼠标点击图中的按键。Esc = 全部松开", // 확인 필요
   "keyTest.pressed": "按下的键",
   "keyTest.none": "无",
   "keyTest.note": "指法表中的音（记谱音）", // 확인 필요

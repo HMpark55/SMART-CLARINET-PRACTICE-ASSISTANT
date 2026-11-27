@@ -4,7 +4,7 @@ import { KEYS } from "../input/keys.js";
 import { lookupMidi } from "../feedback/fingerings.js";
 import { t, applyI18n } from "../i18n/index.js";
 import { noteName } from "./noteName.js";
-import { keyGridHtml, paintKeys } from "./keyGrid.js";
+import { keyGridHtml, paintKeys, enablePointerKeys } from "./keyGrid.js";
 import { clarinetDiagramHtml } from "./clarinetDiagram.js";
 
 const LOG_LINES = 6;
@@ -52,8 +52,9 @@ export function mountKeyTestView(container, input) {
     : () => {};
 
   const off = input.onChange(render);
+  const offPointer = enablePointerKeys(container); // 그림·격자를 마우스로 눌러도 입력
   render();
   // 언어가 바뀌면 다시 그린다 (음 이름이 언어마다 다름)
   document.addEventListener("langchange", render);
-  return () => { off(); offLine(); document.removeEventListener("langchange", render); };
+  return () => { off(); offLine(); offPointer(); document.removeEventListener("langchange", render); };
 }

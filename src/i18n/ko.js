@@ -10,7 +10,7 @@ export default {
   "guide.ready.title": "1. 준비",
   "guide.ready.body": "크롬 브라우저와 키보드만 있으면 돼요. 화면 오른쪽 위에서 언어와 키보드 입력 방식을 고를 수 있어요.",
   "guide.keys.title": "2. 키보드 = 클라리넷 키",
-  "guide.keys.body": "키보드 키 하나가 클라리넷 구멍이나 키 하나예요. 왼손 구멍은 F D S, 오른손 구멍은 J K L, 뒤쪽 엄지 구멍은 V예요. 테두리만 칠해진 나머지 키는 레버 키예요.",
+  "guide.keys.body": "키보드 키 하나가 클라리넷 구멍이나 키 하나예요. 왼손 구멍은 F D S, 오른손 구멍은 J K L, 뒤쪽 엄지 구멍은 V예요. 테두리만 칠해진 나머지 키는 레버 키예요. 그림의 키를 마우스로 눌러도 돼요.",
   "guide.keys.try": "키 상태 확인에서 직접 눌러 보기 →",
   "guide.spaceKey": "확인 (운지 연습)",
   "guide.mode.title": "3. 입력 방식",
@@ -36,7 +36,7 @@ export default {
   "input.keyboard": "키보드 (시험용)",
   "input.sensor": "센서 보드",
 
-  "keyTest.hint": "키보드 키 하나가 센서 하나예요. 키를 누르면 그 구멍·키를 덮은 것으로 봐요. Esc = 모두 떼기",
+  "keyTest.hint": "키보드 키 하나가 센서 하나예요. 키보드를 누르거나 그림의 키를 마우스로 눌러도 돼요. Esc = 모두 떼기",
   "keyTest.pressed": "눌린 키",
   "keyTest.none": "없음",
   "keyTest.note": "운지표의 음 (써진 음)",
