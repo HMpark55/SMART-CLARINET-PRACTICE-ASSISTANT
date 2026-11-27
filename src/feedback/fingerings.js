@@ -79,3 +79,16 @@ export function fingeringFor(midi) {
   }
   return null;
 }
+
+// 운지표 페이지용: 어떤 음의 운지를 모두(기본 운지가 먼저) 돌려준다. 표 내용은 바꾸지 않고 읽기만 한다.
+// (선생님 요청으로 추가 — 대체 운지까지 보여주려고)
+// 클라리온 음역은 기본 음(E3~F4)의 운지마다 레지스터 키를 더한 것.
+export function allFingeringsFor(midi) {
+  const found = TABLE.filter(([, m]) => m === midi).map(([keys]) => [...keys]);
+  if (found.length) return found;
+  const base = midi - REGISTER_OFFSET;
+  if (base >= CLARION_BASE_MIN && base <= CLARION_BASE_MAX) {
+    return allFingeringsFor(base).map((keys) => [...keys, "register"]);
+  }
+  return [];
+}

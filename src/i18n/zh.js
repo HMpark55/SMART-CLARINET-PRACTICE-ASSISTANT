@@ -63,6 +63,16 @@ export default {
   "debug.result.pressed": "仅确认按下", // 확인 필요
   "debug.result.ok": "✓ 正常",
 
+  "nav.chart": "指法表",
+  "chart.title": "指法表",
+  "chart.lead": "按记谱音（降B调单簧管）列出的基本指法。按下涂色的键就能吹出这个音。可以在按键检查里按同样的键试试。", // 확인 필요
+  "chart.verify": "这张表是从之前的演示版搬过来的，请对照真实的单簧管指法表确认一次。", // 확인 필요
+  "chart.range.low": "低音区（夏吕莫音区）", // 확인 필요
+  "chart.range.throat": "喉音区", // 확인 필요
+  "chart.range.clarion": "克拉里昂音区——低音指法 + 泛音键 = 高十二度", // 확인 필요
+  "chart.range.altissimo": "高音区（极高音区）", // 확인 필요
+  "chart.alt": "其他指法",
+
   "nav.keyTest": "按键检查", // 확인 필요
   "nav.fingering": "指法练习",
   "nav.playing": "音准演奏练习", // 확인 필요

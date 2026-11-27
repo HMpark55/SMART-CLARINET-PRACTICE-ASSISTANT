@@ -42,7 +42,7 @@ src/
   audio/        mic.js, pitch.js            (세진이 작성)
   feedback/     feedback.js, fingerings.js  (세진이 작성, fingerings.js는 이전 데모에서 이식)
   storage/      records.js, csv.js
-  ui/           router.js(주소 #/...), keyTestView, fingeringPracticeView, guideView, debugView(개발용), clarinetDiagram
+  ui/           router.js(주소 #/...), keyTestView, fingeringPracticeView, guideView, chartView(운지표), debugView(개발용), clarinetDiagram
   assets/       favicon.svg
   i18n/         index.js, ko.js, en.js, zh.js
 docs/           개발 메모, 테스트 기록, 캡처, hardware.md(부품 안내), test-*.mjs(node 시험)
