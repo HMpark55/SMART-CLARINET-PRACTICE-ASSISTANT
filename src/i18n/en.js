@@ -62,6 +62,16 @@ export default {
   "debug.result.pressed": "Press only",
   "debug.result.ok": "✓ OK",
 
+  "nav.chart": "Fingering chart",
+  "chart.title": "Fingering chart",
+  "chart.lead": "Basic fingerings by written pitch (B♭ clarinet). Press the colored keys to play the note. You can try the same keys in Key check.",
+  "chart.verify": "This chart was carried over from the earlier demo. Please check it once against a real clarinet fingering chart.",
+  "chart.range.low": "Low notes (chalumeau)",
+  "chart.range.throat": "Throat tones",
+  "chart.range.clarion": "Clarion — low fingering + register key = a twelfth higher",
+  "chart.range.altissimo": "High notes (altissimo)",
+  "chart.alt": "Alternate",
+
   "nav.keyTest": "Key check",
   "nav.fingering": "Fingering practice",
   "nav.playing": "Pitch practice",

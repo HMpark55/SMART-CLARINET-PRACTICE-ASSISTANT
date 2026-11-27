@@ -8,6 +8,7 @@ import { mountGuideView } from "./ui/guideView.js";
 import { mountKeyTestView } from "./ui/keyTestView.js";
 import { mountFingeringPracticeView } from "./ui/fingeringPracticeView.js";
 import { mountDebugView } from "./ui/debugView.js";
+import { mountChartView } from "./ui/chartView.js";
 
 const lang = loadLang();
 document.documentElement.lang = lang;
@@ -47,6 +48,7 @@ startRouter({
     guide: { mount: mountGuideView, titleKey: "nav.guide" },
     keys: { mount: mountKeyTestView, titleKey: "nav.keyTest" },
     fingering: { mount: mountFingeringPracticeView, titleKey: "nav.fingering" },
+    chart: { mount: mountChartView, titleKey: "nav.chart" },
     debug: { mount: mountDebugView, titleKey: "nav.debug" },
   },
 });

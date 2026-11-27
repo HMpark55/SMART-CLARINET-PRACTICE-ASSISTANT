@@ -62,6 +62,16 @@ export default {
   "debug.result.pressed": "눌림만 확인",
   "debug.result.ok": "✓ 정상",
 
+  "nav.chart": "운지표",
+  "chart.title": "운지표",
+  "chart.lead": "써진 음 기준(B♭ 클라리넷)의 기본 운지예요. 칠해진 키를 누르면 그 음이 나요. 키 상태 확인에서 같은 키를 눌러 직접 확인할 수 있어요.",
+  "chart.verify": "이 표는 이전 데모에서 옮겨 온 것이에요. 실제 클라리넷 운지표와 한 번 대조해 확인해 주세요.",
+  "chart.range.low": "낮은 음 (샬뤼모)",
+  "chart.range.throat": "목 음역",
+  "chart.range.clarion": "클라리온 — 낮은 음 운지 + 레지스터 키 = 12도 위",
+  "chart.range.altissimo": "높은 음 (알티시모)",
+  "chart.alt": "다른 운지",
+
   "nav.keyTest": "키 상태 확인",
   "nav.fingering": "운지 연습",
   "nav.playing": "음정 연주 연습",
