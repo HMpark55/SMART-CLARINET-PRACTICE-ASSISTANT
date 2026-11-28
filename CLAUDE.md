@@ -45,6 +45,7 @@ src/
   ui/           router.js(주소 #/...), keyTestView, fingeringPracticeView, guideView, chartView(운지표), debugView(개발용), clarinetDiagram
   assets/       favicon.svg
   i18n/         index.js, ko.js, en.js, zh.js
+hardware/model/ 3D 프린팅 클라리넷 모형 (clarinet.scad 원본, stl/ 출력 파일)
 docs/           개발 메모, 테스트 기록, 캡처, hardware.md(부품 안내), test-*.mjs(node 시험)
 ```
 

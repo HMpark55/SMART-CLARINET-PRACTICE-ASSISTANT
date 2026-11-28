@@ -9,6 +9,7 @@
 | [SPEC.md](SPEC.md) | 명세: 키 목록, 신호 형식, 기록 필드 |
 | [CLAUDE.md](CLAUDE.md) | 지켜야 할 규칙 (Claude Code도 이 파일을 읽는다) |
 | [docs/hardware.md](docs/hardware.md) | 센서·보드 부품 안내 |
+| [hardware/model/](hardware/model/README.md) | 3D 프린팅 클라리넷 모형 (STL, 설계 원본) |
 
 ## 실행 (내 컴퓨터에서)
 
